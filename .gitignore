@@ -1,0 +1,125 @@
+# .NET
+bin/
+obj/
+!*/.keep
+
+# Rider
+.idea/
+*.sln.iml
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+*.log
+*.log.*
+
+# Visual Studio
+.vscode/
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Packages
+*.nupkg
+*.snupkg
+packages/
+!**/packages/build/
+!**/packages/repositories.config
+
+# Backup files
+*~
+*.swp
+*.bak
+*.orig
+*.tmp
+*.old
+
+# Build results
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.ilk
+*.lib
+*.ndk
+*.ncb
+*.obj
+*.sdf
+*.tlog
+*.vcxproj.user
+*.vspscc
+*.vssscc
+*.vscode
+_TestResults/
+
+# Rider specific
+.idea/
+*.sln.iml
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/deployment.xml
+.idea/**/diff.xml
+.idea/**/dictionary.xml
+.idea/**/modules.xml
+.idea/**/description.xml
+.idea/**/searches.xml
+.idea/**/remoteDeploy.xml
+.idea/**/vcs.xml
+.idea/**/path.macros.xml
+
+# DotNet-Generated Files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+Generated\ Files/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Node modules
+node_modules/
+
+# JetBrains Rider
+.idea/
+
+# Coverage results
+coverage/
+*.coverage
+*.coveragexml
+*.codecov
+*.codecoverage
+
+# Temporary files
+*.tmp
+*.temp
+*.tmp.*
+
+# Backup & Undo Files
+*~
+*.bak
+*.swp
+*.swo
+
+# Crash Reports
+crashlytics/
+
+# MacOS files
+.DS_Store
+.AppleDouble
+.LSOverride
