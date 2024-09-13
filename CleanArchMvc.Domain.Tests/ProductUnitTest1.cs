@@ -91,7 +91,7 @@ namespace CleanArchMvc.Domain.Tests
             Action action = () => new Product("Produto A", "Descrição válida", 10.99m, 5, null);
             action.Should().NotThrow<DomainExceptionValidation>("porque a imagem pode ser nula se não há validação específica");
         }
-        [Fact(DisplayName = "Criar produto com imagem nula deve não lançar exceção")]
+        [Fact(DisplayName = "Criar produto com imagem nula não deve lançar exceção")]
         public void CriarProduto_ComImagemNula_DeveLancaReferencerExcecao()
         {
             Action action = () => new Product("Produto A", "Descrição válida", 10.99m, 5, null);
