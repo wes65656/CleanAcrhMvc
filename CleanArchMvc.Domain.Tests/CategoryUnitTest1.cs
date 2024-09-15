@@ -55,7 +55,7 @@ namespace CleanArchMvc.Domain.Tests
             action
                 .Should()
                 .Throw<DomainExceptionValidation>()
-                .WithMessage("O nome não pode ser menor que 3 char!");
+                .WithMessage("Nome Invalido. O nome não pode estar vazio");
         }
     }
 }
