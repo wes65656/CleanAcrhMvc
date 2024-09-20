@@ -17,7 +17,7 @@ public class CategoryService : ICategoryService
         _mapper = mapper;
     }
 
-    public async Task<IEnumerable<CategoryDto>> GetCsetgories()
+    public async Task<IEnumerable<CategoryDto>> GetCategories()
     {
         var categoriesEntity =await _categoryRepository.GetCategories();
         return _mapper.Map<IEnumerable<CategoryDto>>(categoriesEntity);
