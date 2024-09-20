@@ -4,7 +4,7 @@ namespace CleanArchMvc.Aplication.Interfaces;
 
 public interface ICategoryService
 {
-    Task<IEnumerable<CategoryDto>> GetCsetgories();
+    Task<IEnumerable<CategoryDto>> GetCategories();
     Task<CategoryDto> GetById(int? id);
 
     Task Add(CategoryDto categoryDto);
