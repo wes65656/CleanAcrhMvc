@@ -1,3 +1,6 @@
+using CleanArchMvc.Aplication.Interfaces;
+using CleanArchMvc.Aplication.Mappings;
+using CleanArchMvc.Aplication.Services;
 using CleanArchMvc.Domain.Interfaces;
 using CleanArchMvc.Infra.Data.Context;
 using CleanArchMvc.Infra.Data.Repositories;
@@ -18,7 +21,11 @@ public static class DependencyInjection
         
         services.AddScoped<ICategoryRepository, CategoryRepository>();
         services.AddScoped<IProductRepository, ProductRepository>();
-
+        
+        services.AddScoped<IProductService, ProductService>();
+        services.AddScoped<ICategoryService, CategoryService>();
+        services.AddAutoMapper(typeof(DomainToDtoMappingProfile));
+        
         return services;
     }
 }
