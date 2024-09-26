@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
-        <ImplicitUsings>enable</ImplicitUsings>
+        <ImplicitUsings>disable</ImplicitUsings>
     </PropertyGroup>
 
     <ItemGroup>
@@ -11,23 +11,18 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Remove="Controllers\HomeController.cs" />
-      <Compile Remove="Views\Home\**" />
       <Compile Remove="Pages\**" />
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Remove="Views\Home\**" />
       <EmbeddedResource Remove="Pages\**" />
     </ItemGroup>
 
     <ItemGroup>
-      <Content Remove="Views\Home\**" />
       <Content Remove="Pages\**" />
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove="Views\Home\**" />
       <None Remove="Pages\**" />
     </ItemGroup>
 
