@@ -25,6 +25,9 @@ public static class DependencyInjection
         services.AddScoped<IProductService, ProductService>();
         services.AddScoped<ICategoryService, CategoryService>();
         services.AddAutoMapper(typeof(DomainToDtoMappingProfile));
+
+        var myHandlers = AppDomain.CurrentDomain.Load("CleanArchMvc.Aplication");
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(ProductService).Assembly));
         
         return services;
     }
