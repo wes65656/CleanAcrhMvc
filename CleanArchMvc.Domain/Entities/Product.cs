@@ -8,7 +8,7 @@ public sealed class Product : BaseEntity
     public string Description { get; private set; }
     public decimal Price { get; private set; }
     public int Stock { get; private set; }
-    public string? Image { get; private set; }
+    public string Image { get; private set; }
 
     public Product(string name, string description, decimal price, int stock, string image)
     {
@@ -37,7 +37,7 @@ public sealed class Product : BaseEntity
                 "O nome não pode estar vazio!");
         
         DomainExceptionValidation.
-            When(name.
+            When(name?.
                 Length < 3,
                 "O nome não pode ser menor que 3 char!");
         
