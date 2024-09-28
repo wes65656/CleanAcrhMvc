@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using AutoMapper;
 using CleanArchMvc.Aplication.DTOs;
 using CleanArchMvc.Aplication.Interfaces;
@@ -34,6 +35,7 @@ public class ProductService : IProductService
 
     public async Task<ProductDto> GetById(int? id)
     {
+        Debug.Assert(id != null, nameof(id) + " != null");
         var productByIdQuery = new GetProductByIdQuery(id.Value);
 
         if (productByIdQuery is null)
@@ -44,17 +46,6 @@ public class ProductService : IProductService
         return _mapper.Map<ProductDto>(result);
     }
     
-    // public async Task<ProductDto> GetProductCategory(int? id)
-    // {
-    //     var productByIdQuery = new GetProductByIdQuery(id.Value);
-    //
-    //     if (productByIdQuery is null)
-    //         throw new Exception($"Entity could not be loaded");
-    //
-    //     var result = await _mediator.Send(productByIdQuery);
-    //     
-    //     return _mapper.Map<ProductDto>(result);
-    // }
     
     public async Task Add(ProductDto productDto)
     {
@@ -63,13 +54,14 @@ public class ProductService : IProductService
     }
     
     public async Task Update(ProductDto productDto)
-    {
-        var productCreateCommand = _mapper.Map<ProductCreateCommand>(productDto);
-        await _mediator.Send(productCreateCommand);
-    }
-    
+     {
+         var productUpdateCommand = _mapper.Map<ProductUpdateCommand>(productDto); 
+         await _mediator.Send(productUpdateCommand);
+     }
+     
     public async Task Remove(int? id)
     {
+        Debug.Assert(id != null, nameof(id) + " != null");
         var productRemoveCommand = new ProductRemoveCommand(id.Value);
         if (productRemoveCommand is null)
             throw new Exception($"Entity could not be loaded");
